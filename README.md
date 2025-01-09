@@ -57,7 +57,7 @@ Make an .env file and add necessary variables:
 nano .env
 ```
 
-You need to add server address, login token, and check token to the .env file. Also, if you use a (bot.py) program where motors are controlled, you need to add the motor control ports.
+You need to add server address "SERVER_ADDRESS" and check token "SERVER_VERIFY_TOKEN" to the .env file (Use the ones you set in the websocket server's .env file). Bot login token "BOT_LOGIN_TOKEN" can be created in the admin page. Also, if you use a (bot.py) program where motors are controlled, you need to add the motor control ports.
 
 You can also disable SSL verification for development purposes.
 
@@ -67,16 +67,16 @@ Example .env file:
 
 ```
 # Server address and tokens
-SERVER_ADDRESS = https://localhost:123
-BOT_LOGIN_TOKEN = 123
-SERVER_VERIFY_TOKEN = 123
+SERVER_ADDRESS = https://xxx.xxx.xxx.xxx:8083
+BOT_LOGIN_TOKEN = create_code_on_admin_page
+SERVER_VERIFY_TOKEN = verification_token_for_the_bot
 
 # Ports (bot.py)
 TRINAMIC_PORT = /dev/ttyACM3
 MODBUS_PORT = /dev/ttyUSB0
 
 # You can disable ssl verification (for development)
-VERIFY_SSL = True
+VERIFY_SSL = False
 ```
 
 ## How to automatically start the bot script?
@@ -107,6 +107,8 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
+You can use either "bot.py" or "simple_bot.py".
+
 Enable service:
 
 ```bash
@@ -128,5 +130,3 @@ hynebot-control-center-bot/
 │
 └── system_structure.png    # System structure picture
 ```
-
-You can use either "bot.py" or "simple_bot.py".
