@@ -1,4 +1,4 @@
-# Hynebot Control Center [Bot]
+# Hynebot Control Center (Bot part)
 
 The idea behind this project is to allow and handle use of hynebots over the Internet. This repository contains all programs related to the bot. This bot part is developed to work on the Ubuntu computer in the hynebot.
 
@@ -18,7 +18,9 @@ Clone the project:
 
 ```bash
 git clone git@github.com:m1r0-h/hynebot-control-center-bot.git
+```
 
+```bash
 cd hynebot-control-center-bot/
 ```
 
@@ -57,7 +59,7 @@ Make an .env file and add necessary variables:
 nano .env
 ```
 
-You need to add server address "SERVER_ADDRESS" and check token "SERVER_VERIFY_TOKEN" to the .env file (Use the ones you set in the websocket server's .env file). Bot login token "BOT_LOGIN_TOKEN" can be created in the admin page. Also, if you use a (bot.py) program where motors are controlled, you need to add the motor control ports.
+You need to add server address "SERVER_ADDRESS" and check token "SERVER_VERIFY_TOKEN" to the .env file (Use the ones you set in the socket-server's .env file). Bot login token "BOT_LOGIN_TOKEN" can be created in the admin page. Also, if you use a (bot.py) program where motors are controlled, you need to add the motor control ports.
 
 You can also disable SSL verification for development purposes.
 
