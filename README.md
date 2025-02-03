@@ -1,6 +1,8 @@
 # Hynebot Control Center (Bot part)
 
-The idea behind this project is to allow and handle use of hynebots over the Internet. This repository contains all programs related to the bot. This bot part is developed to work on the Ubuntu computer in the hynebot.
+The idea behind this project is to allow and handle use of hynebots over the Internet. This repository contains all programs related to the bot. This bot part is developed to work on the Ubuntu computer in the Hynebot.
+
+Server part: https://github.com/m1r0-h/hynebot-control-center
 
 ![System structure](system_structure.png)
 
